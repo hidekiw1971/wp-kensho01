@@ -3,7 +3,7 @@
 <section class="l-container p-container">
     <main class="l-main p-main">
         <h2>メイン</h2>
-        <h3>index.php</h3>
+        <h3>category.php</h3>
         <!-- クエリ設定 -->
         <?php
         $category_id = get_query_var('cat');

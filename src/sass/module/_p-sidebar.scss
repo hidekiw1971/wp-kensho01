@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.p-sidebar {
+    @include mq(md) {
+        flex: 1;
+        // 
+    }
+}

@@ -150,19 +150,33 @@ select::-ms-expand {
 	display: none;
 }
 
-.inner {
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 20px;
-	padding-right: 20px;
-	width: 100%;
+.l-header,
+.l-container,
+.l-footer {
+	background: rgb(211, 211, 211);
+	margin: 0 auto;
+	max-width: 1000px;
+	max-width: 62.5rem;
 }
 
-.test {
-	background-color: red;
-	color: #fff;
-	font-size: 20px;
-	font-size: 1.25rem;
+.p-header {
+	background: rgb(240, 230, 140);
+}
+
+.p-container {
+	background: rgb(255, 127, 80);
+}
+
+.p-footer {
+	background: rgb(102, 205, 170);
+}
+
+.p-main {
+	background: rgb(176, 196, 222);
+}
+
+.p-sidebar {
+	background: rgb(255, 192, 203);
 }
 
 @media screen and (min-width: 768px) {
@@ -187,10 +201,22 @@ a:hover {
 	opacity: 0.8;
 }
 
-.inner {
-	max-width: 1150px;
-	padding-left: 25px;
-	padding-right: 25px;
+.p-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.p-main {
+	-webkit-box-flex: 3;
+	-ms-flex: 3;
+	flex: 3;
+}
+
+.p-sidebar {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
 }
 
 }

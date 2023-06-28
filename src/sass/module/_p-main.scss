@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.p-main {
+    @include mq(md) {
+        flex: 3;
+        // 
+    }
+}

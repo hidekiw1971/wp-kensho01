@@ -3,16 +3,16 @@
 <section class="l-container p-container">
     <main class="l-main p-main">
         <h2>メイン</h2>
-        <h3>index.php</h3>
+        <h3>tag.php</h3>
         <!-- クエリ設定 -->
         <?php
-        $category_id = get_query_var('cat');
+        $tag = get_query_var('tag');
         $paged = get_query_var('paged') ? get_query_var('paged') : 1;
         $args = array(
             'post_type' => 'post',
             'paged' => $paged,
             'posts_per_page' => 3,
-            'cat' => $category_id,
+            'tag' => $tag,
         );
         $my_query = new WP_Query($args);
         ?>

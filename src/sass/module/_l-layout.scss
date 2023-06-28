@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.l-header,
+.l-container,
+.l-footer {
+    max-width: rem(1000);
+    margin: 0 auto;
+    background: rgba(211, 211, 211, 1);
+
+    @include mq(md) {
+
+        // 
+    }
+}
