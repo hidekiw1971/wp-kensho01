@@ -6,10 +6,11 @@
         <h3>category.php</h3>
         <!-- クエリ設定 -->
         <?php
-        $category_id = get_query_var('cat');
+        $post_type = get_post_type();
+        $category_id = get_query_var('cat'); // カテゴリーID取得
         $paged = get_query_var('paged') ? get_query_var('paged') : 1;
         $args = array(
-            'post_type' => 'post',
+            'post_type' => $post_type,
             'paged' => $paged,
             'posts_per_page' => 3,
             'cat' => $category_id,

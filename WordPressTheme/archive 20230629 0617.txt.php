@@ -6,21 +6,20 @@
         <h3>archive.php</h3>
         <!-- クエリ設定 -->
         <?php
-        $queried_object = get_queried_object();
-        $category_id = $queried_object->term_id;
-        $taxonomy = $queried_object->taxonomy;
-        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $post_type = get_post_type();
+        // $category_id = get_query_var('cat'); // カテゴリーID取得
+        // $terms = get_the_terms($post - ID, 'news-category');
+        $paged = get_query_var('paged') ? get_query_var('paged') : 1;
         $args = array(
-            'post_type' => 'news',
-            'posts_per_page' => 3,
+            'post_type' => $post_type,
             'paged' => $paged,
-            'tax_query' => array(
-                array(
-                    'taxonomy' => $taxonomy,
-                    'field' => 'term_id',
-                    'terms' => $category_id,
-                )
-            )
+            'posts_per_page' => 3,
+            // 'tax_query' => array(
+            //     array(
+            //         'taxonomy' => 'news-category',
+            //         'terms' => 'news-category',
+            //     )
+            // )
         );
         $my_query = new WP_Query($args);
         ?>
